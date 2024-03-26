@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.28917.181
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34701.34
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EverestLMS.API", "EverestLMS.API\EverestLMS.API.csproj", "{9B16A0DD-8A3C-4229-A21D-2B572612E1D5}"
 EndProject
@@ -36,8 +36,6 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EverestLMS.Scheduler", "EverestLMS.Scheduler\EverestLMS.Scheduler.csproj", "{686B3DB4-546A-445E-9151-A84F0BA12EC8}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EverestLMS.Core", "EverestLMS.Core\EverestLMS.Core.csproj", "{E32B0E7F-A313-4130-9728-63AA5D1B2CEB}"
-EndProject
-Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "EverestLMS.Database", "EverestLMS.Database\EverestLMS.Database.sqlproj", "{09FF1250-3972-46D7-8922-728A2AA1CA2C}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{E218F272-2D54-48F4-9E9B-2B17DEBD43ED}"
 	ProjectSection(SolutionItems) = preProject
@@ -98,12 +96,6 @@ Global
 		{E32B0E7F-A313-4130-9728-63AA5D1B2CEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E32B0E7F-A313-4130-9728-63AA5D1B2CEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E32B0E7F-A313-4130-9728-63AA5D1B2CEB}.Release|Any CPU.Build.0 = Release|Any CPU
-		{09FF1250-3972-46D7-8922-728A2AA1CA2C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{09FF1250-3972-46D7-8922-728A2AA1CA2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{09FF1250-3972-46D7-8922-728A2AA1CA2C}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
-		{09FF1250-3972-46D7-8922-728A2AA1CA2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{09FF1250-3972-46D7-8922-728A2AA1CA2C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{09FF1250-3972-46D7-8922-728A2AA1CA2C}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -121,7 +113,6 @@ Global
 		{781A6817-A9D0-46CA-9897-F961E8A5F297} = {36B18967-D8BC-4CB0-BE70-DBA6232A0905}
 		{686B3DB4-546A-445E-9151-A84F0BA12EC8} = {36B18967-D8BC-4CB0-BE70-DBA6232A0905}
 		{E32B0E7F-A313-4130-9728-63AA5D1B2CEB} = {993CC342-AA07-4560-815D-FE553795937A}
-		{09FF1250-3972-46D7-8922-728A2AA1CA2C} = {8454DF39-F1F7-4595-BC8A-FAF7037985D7}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4AD6EF27-C02E-44C3-A9A9-D2949111BE31}
