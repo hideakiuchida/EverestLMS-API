@@ -2,9 +2,12 @@
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
+    <ApplicationInsightsResourceId>/subscriptions/820d6db5-14ab-4148-8684-ce202b994b4d/resourceGroups/hideaki-resource-group/providers/microsoft.insights/components/everest-lms-api</ApplicationInsightsResourceId>
+    <UserSecretsId>aded0801-7046-4ba1-be15-7505eb01f81b</UserSecretsId>
   </PropertyGroup>
   
   <ItemGroup>
+	<PackageReference Include="Microsoft.ApplicationInsights.AspNetCore" Version="2.21.0" />
 	<PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.1" />
 	<PackageReference Include="Serilog" Version="2.8.0" />
 	<PackageReference Include="Serilog.AspNetCore" Version="2.1.1" />
