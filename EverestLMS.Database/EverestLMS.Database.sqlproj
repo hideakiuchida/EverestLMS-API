@@ -1,0 +1,183 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Name>EverestLMS.Database</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <ProjectGuid>{09ff1250-3972-46d7-8922-728a2aa1ca2c}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql130DatabaseSchemaProvider</DSP>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <RootNamespace>EverestLMS.Database</RootNamespace>
+    <AssemblyName>EverestLMS.Database</AssemblyName>
+    <ModelCollation>1033,CI</ModelCollation>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <DeployToDatabase>True</DeployToDatabase>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetLanguage>CS</TargetLanguage>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SqlServerVerification>False</SqlServerVerification>
+    <IncludeCompositeObjects>True</IncludeCompositeObjects>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+    <DefaultCollation>SQL_Latin1_General_CP1_CI_AS</DefaultCollation>
+    <DefaultFilegroup>PRIMARY</DefaultFilegroup>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <!-- Default to the v11.0 targets path if the targets file for the current VS version is not found -->
+    <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
+    <VisualStudioVersion Condition="'$(SSDTExists)' == ''">11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Condition="'$(SQLDBExtensionsRefPath)' != ''" Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Properties" />
+    <Folder Include="dbo\" />
+    <Folder Include="dbo\Tables\" />
+    <Folder Include="dbo\Stored Procedures\" />
+    <Folder Include="PostDeploymentData" />
+    <Folder Include="dbo\Types" />
+    <Folder Include="dbo\Stored Procedures\Asignacion" />
+    <Folder Include="dbo\Stored Procedures\Cursos" />
+    <Folder Include="dbo\Stored Procedures\Lecciones" />
+    <Folder Include="dbo\Stored Procedures\Participantes" />
+    <Folder Include="dbo\Stored Procedures\Calendario" />
+    <Folder Include="dbo\Stored Procedures\RealizarCurso" />
+    <Folder Include="dbo\Stored Procedures\Cloudinary" />
+    <Folder Include="dbo\Stored Procedures\Etapas" />
+    <Folder Include="dbo\Stored Procedures\RealizarExamen" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="dbo\Tables\Participante.sql" />
+    <Build Include="dbo\Tables\ConocimientoParticipante.sql" />
+    <Build Include="dbo\Tables\RatingCurso.sql" />
+    <Build Include="dbo\Tables\PrediccionRatingCurso.sql" />
+    <Build Include="dbo\Tables\Conocimiento.sql" />
+    <Build Include="dbo\Tables\LineaCarrera.sql" />
+    <Build Include="dbo\Tables\Nivel.sql" />
+    <Build Include="dbo\Tables\Etapa.sql" />
+    <Build Include="dbo\Tables\Curso.sql" />
+    <Build Include="dbo\Types\Ids.sql" />
+    <Build Include="dbo\Tables\Sede.sql" />
+    <Build Include="dbo\Tables\Calendario.sql" />
+    <Build Include="dbo\Tables\EventoParticipante.sql" />
+    <Build Include="dbo\Tables\CriterioAceptacion.sql" />
+    <Build Include="dbo\Tables\Leccion.sql" />
+    <Build Include="dbo\Tables\Pregunta.sql" />
+    <Build Include="dbo\Tables\Respuesta.sql" />
+    <Build Include="dbo\Tables\Dificultad.sql" />
+    <Build Include="dbo\Tables\TipoContenido.sql" />
+    <None Include="PostDeploymentData\01_Dificultad.sql" />
+    <Build Include="dbo\Tables\Idioma.sql" />
+    <Build Include="dbo\Tables\CloudinaryFile.sql" />
+    <Build Include="dbo\Tables\Usuario.sql" />
+    <Build Include="dbo\Tables\Rol.sql" />
+    <Build Include="dbo\Stored Procedures\Asignacion\AsignarAutomaticamente.sql" />
+    <Build Include="dbo\Stored Procedures\Asignacion\AsignarSherpa.sql" />
+    <Build Include="dbo\Stored Procedures\Participantes\CreateConocimientoParticipante.sql" />
+    <Build Include="dbo\Stored Procedures\Cursos\CreateCurso.sql" />
+    <Build Include="dbo\Stored Procedures\Calendario\CreateEvento.sql" />
+    <Build Include="dbo\Stored Procedures\Lecciones\CreateLeccion.sql" />
+    <Build Include="dbo\Stored Procedures\Participantes\CreateParticipante.sql" />
+    <Build Include="dbo\Stored Procedures\RealizarCurso\CreatePredictionCurso.sql" />
+    <Build Include="dbo\Stored Procedures\Lecciones\CreatePregunta.sql" />
+    <Build Include="dbo\Stored Procedures\RealizarCurso\CreateRatingCurso.sql" />
+    <Build Include="dbo\Stored Procedures\Lecciones\CreateRespuesta.sql" />
+    <Build Include="dbo\Stored Procedures\Participantes\CreateUsuario.sql" />
+    <Build Include="dbo\Stored Procedures\Cloudinary\CreateCloudinaryFile.sql" />
+    <Build Include="dbo\Stored Procedures\Cloudinary\DeleteCloudinaryFile.sql" />
+    <Build Include="dbo\Stored Procedures\Calendario\DeleteCriterioAceptacion.sql" />
+    <Build Include="dbo\Stored Procedures\Calendario\CreateCriterioAceptacion.sql" />
+    <Build Include="dbo\Stored Procedures\Cursos\DeleteCurso.sql" />
+    <Build Include="dbo\Stored Procedures\Calendario\DeleteEvento.sql" />
+    <Build Include="dbo\Stored Procedures\Lecciones\DeleteLeccion.sql" />
+    <Build Include="dbo\Stored Procedures\Lecciones\DeleteLeccionMaterial.sql" />
+    <Build Include="dbo\Stored Procedures\Participantes\DeleteParticipante.sql" />
+    <Build Include="dbo\Stored Procedures\Lecciones\DeletePregunta.sql" />
+    <Build Include="dbo\Stored Procedures\Lecciones\DeleteRespuesta.sql" />
+    <Build Include="dbo\Stored Procedures\Asignacion\DesasignarSherpa.sql" />
+    <Build Include="dbo\Stored Procedures\Asignacion\DesasignarSherpaAutomaticamente.sql" />
+    <Build Include="dbo\Stored Procedures\Cloudinary\EditCloudinaryFile.sql" />
+    <Build Include="dbo\Stored Procedures\Cursos\EditCurso.sql" />
+    <Build Include="dbo\Stored Procedures\Lecciones\UpdateLeccion.sql" />
+    <Build Include="dbo\Stored Procedures\Cloudinary\GetCloudinaryFile.sql" />
+    <Build Include="dbo\Stored Procedures\Cloudinary\GetCloudinaryFiles.sql" />
+    <Build Include="dbo\Stored Procedures\Participantes\GetConocimientos.sql" />
+    <Build Include="dbo\Stored Procedures\Participantes\GetConocimientosPorPartipante.sql" />
+    <Build Include="dbo\Stored Procedures\Cursos\GetCurso.sql" />
+    <Build Include="dbo\Stored Procedures\Cursos\GetCursos.sql" />
+    <Build Include="dbo\Stored Procedures\RealizarCurso\GetCursosPredictionByParticipante.sql" />
+    <Build Include="dbo\Stored Procedures\RealizarCurso\GetCursosByPaticipante.sql" />
+    <Build Include="dbo\Stored Procedures\Asignacion\GetEscaladoresNoAsignados.sql" />
+    <Build Include="dbo\Stored Procedures\Asignacion\GetEscaladoresPorSherpa.sql" />
+    <Build Include="dbo\Stored Procedures\Lecciones\GetLeccion.sql" />
+    <Build Include="dbo\Stored Procedures\Lecciones\GetLecciones.sql" />
+    <Build Include="dbo\Stored Procedures\Participantes\GetParticipantes.sql" />
+    <Build Include="dbo\Stored Procedures\Participantes\GetUsuarioByUsername.sql" />
+    <Build Include="dbo\Stored Procedures\Etapas\GetEtapas.sql" />
+    <Build Include="dbo\Stored Procedures\Etapas\GetEtapasPorParticipante.sql" />
+    <Build Include="dbo\Stored Procedures\Lecciones\GetRespuestas.sql" />
+    <Build Include="dbo\Stored Procedures\Lecciones\GetPreguntas.sql" />
+    <Build Include="dbo\Stored Procedures\Lecciones\GetPregunta.sql" />
+    <Build Include="dbo\Stored Procedures\Lecciones\GetRespuesta.sql" />
+    <Build Include="dbo\Stored Procedures\Lecciones\UpdatePregunta.sql" />
+    <Build Include="dbo\Stored Procedures\Lecciones\UpdateRespuesta.sql" />
+    <Build Include="dbo\Tables\Examen.sql" />
+    <Build Include="dbo\Tables\RespuestaEscalador.sql" />
+    <Build Include="dbo\Stored Procedures\RealizarExamen\CreateQandAEscalador.sql" />
+    <Build Include="dbo\Stored Procedures\RealizarExamen\CreateExamen.sql" />
+    <Build Include="dbo\Stored Procedures\RealizarExamen\GetExamen.sql" />
+    <Build Include="dbo\Stored Procedures\RealizarExamen\GetPreguntasDelExamen.sql" />
+    <Build Include="dbo\Stored Procedures\RealizarExamen\UpdateRespuestaDelExamen.sql" />
+    <Build Include="dbo\Stored Procedures\RealizarExamen\UpdateExamen.sql" />
+    <Build Include="dbo\Stored Procedures\Participantes\ActualizarPuntaje.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="dbo\Tables\Evento.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <PostDeploy Include="PostDeploymentData\_Script.PostDeployment.sql" />
+    <None Include="PostDeploymentData\01_Conocimiento.sql" />
+    <None Include="PostDeploymentData\01_LineaCarrera.sql" />
+    <None Include="PostDeploymentData\01_Nivel.sql" />
+    <None Include="PostDeploymentData\02_Etapa.sql" />
+    <None Include="PostDeploymentData\03_Curso.sql" />
+    <None Include="PostDeploymentData\01_Sede.sql" />
+    <None Include="PostDeploymentData\01_Calendario.sql" />
+    <None Include="PostDeploymentData\02_Evento.sql" />
+    <None Include="PostDeploymentData\04_Leccion.sql" />
+    <None Include="PostDeploymentData\05_Pregunta.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PostDeploymentData\01_Idioma.sql" />
+    <None Include="PostDeploymentData\01_Rol.sql" />
+    <None Include="PostDeploymentData\06_Respuesta.sql" />
+    <None Include="EverestLMS.Database.publish.xml" />
+  </ItemGroup>
+</Project>
